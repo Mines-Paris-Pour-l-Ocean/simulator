@@ -1,36 +1,37 @@
 [submodule "colcon_ws/src/Waf_Ros2_Bridge"]
 	path = colcon_ws/src/Waf_Ros2_Bridge
-	url = git@github.com:Aymccar/Waf_Ros2_Bridge.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/Waf_Ros2_Bridge
 	branch = dev
 [submodule "stonefish"]
 	path = stonefish
-	url = git@github.com:Aymccar/stonefish.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/stonefish
 	branch = dev
 [submodule "ardupilot"]
 	path = ardupilot
-	url = git@github.com:Aymccar/ardupilot.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/ardupilot
 	branch = ros
 [submodule "colcon_ws/src/stonefish_ros2"]
 	path = colcon_ws/src/stonefish_ros2
-	url = git@github.com:Aymccar/stonefish_ros2.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/stonefish_ros2
 	branch = dev
 [submodule "colcon_ws/src/Ardupilot_Stonefish_parser"]
 	path = colcon_ws/src/Ardupilot_Stonefish_parser
-	url = git@github.com:Aymccar/Ardupilot_Stonefish_parser.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/Ardupilot_Stonefish_parser
 [submodule "BlueOS"]
 	path = BlueOS
-	url = git@github.com:Aymccar/BlueOS.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/BlueOS
 	branch = ros
 [submodule "blueos-docker-base"]
 	path = blueos-docker-base
-	url = git@github.com:Aymccar/blueos-docker-base.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/blueos-docker-base
 	branch = ubuntu24
 [submodule "colcon_ws/src/v4l2ros2"]
 	path = colcon_ws/src/v4l2ros2
-	url = git@github.com:Aymccar/v4l2ros2.git
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/v4l2ros2
 [submodule "colcon_ws/src/ROS2_UW_Raytracer"]
 	path = colcon_ws/src/ROS2_UW_Raytracer
 	url = https://github.com/Aymccar/ROS2_UW_Raytracer
 [submodule "colcon_ws/src/Anglerfish"]
 	path = colcon_ws/src/Anglerfish
-	url = https://github.com/Aymccar/Anglerfish
+	url = https://github.com/Mines-Paris-Pour-l-Ocean/Anglerfish
+	branch = dev
