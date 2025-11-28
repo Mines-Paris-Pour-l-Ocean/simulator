@@ -51,8 +51,8 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(stonefish_path),
             launch_arguments={"simulation_data": data_path,
                               "scenario_desc": scenario_path, 
-                              "window_res_x": "800",
-                              "window_res_y": "600",
+                              "window_res_x": "1600",
+                              "window_res_y": "1200",
                               "simulation_rate": "1000"}.items()
         ),  
         IncludeLaunchDescription(

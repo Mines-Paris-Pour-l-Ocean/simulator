@@ -1,0 +1,34 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mig/simulator/colcon_ws/src/battery/build/battery
+[ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber.cpp.o[0m
+[100%] [32m[1mLinking CXX executable listener[0m
+[100%] Built target listener
+-- Install configuration: ""
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/lib/battery/listener
+-- Set non-toolchain portion of runtime path of "/home/mig/simulator/colcon_ws/src/battery/install/battery/lib/battery/listener" to ""
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/ament_index/resource_index/package_run_dependencies/battery
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/ament_index/resource_index/parent_prefix_path/battery
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/ament_prefix_path.sh
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/ament_prefix_path.dsv
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/path.sh
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/path.dsv
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.bash
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.sh
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.zsh
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.dsv
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/package.dsv
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/ament_index/resource_index/packages/battery
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/cmake/batteryConfig.cmake
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/cmake/batteryConfig-version.cmake
+-- Installing: /home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/package.xml

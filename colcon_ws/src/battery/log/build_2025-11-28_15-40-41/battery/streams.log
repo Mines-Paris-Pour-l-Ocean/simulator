@@ -1,0 +1,41 @@
+[0.004s] Invoking command in '/home/mig/simulator/colcon_ws/src/battery/build/battery': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mig/simulator/colcon_ws/install/v4l2ros2:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mig/simulator/colcon_ws/src/battery -DCMAKE_INSTALL_PREFIX=/home/mig/simulator/colcon_ws/src/battery/install/battery
+[0.034s] -- The C compiler identification is GNU 13.3.0
+[0.062s] -- The CXX compiler identification is GNU 13.3.0
+[0.071s] -- Detecting C compiler ABI info
+[0.117s] -- Detecting C compiler ABI info - done
+[0.121s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.121s] -- Detecting C compile features
+[0.121s] -- Detecting C compile features - done
+[0.126s] -- Detecting CXX compiler ABI info
+[0.176s] -- Detecting CXX compiler ABI info - done
+[0.181s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.181s] -- Detecting CXX compile features
+[0.181s] -- Detecting CXX compile features - done
+[0.183s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.259s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.312s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.330s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.337s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.344s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.353s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.390s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.391s] -- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+[0.405s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.438s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.490s] -- Configuring done (0.5s)
+[0.491s] [31mCMake Error at CMakeLists.txt:17 (add_executable):
+[0.491s]   Cannot find source file:
+[0.492s] 
+[0.492s]     src/subscriber.cpp
+[0.492s] 
+[0.492s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[0.492s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[0.492s]   .f95 .f03 .hip .ispc
+[0.492s] 
+[0.492s] [0m
+[0.492s] [31mCMake Error at CMakeLists.txt:17 (add_executable):
+[0.492s]   No SOURCES given to target: listener
+[0.492s] 
+[0.492s] [0m
+[0.492s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[0.498s] Invoked command in '/home/mig/simulator/colcon_ws/src/battery/build/battery' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mig/simulator/colcon_ws/install/v4l2ros2:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mig/simulator/colcon_ws/src/battery -DCMAKE_INSTALL_PREFIX=/home/mig/simulator/colcon_ws/src/battery/install/battery

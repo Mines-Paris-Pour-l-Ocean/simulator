@@ -1,0 +1,16 @@
+/home/mig/simulator/colcon_ws/src/battery/install/battery/lib/battery/listener
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/ament_index/resource_index/package_run_dependencies/battery
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/ament_index/resource_index/parent_prefix_path/battery
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/ament_prefix_path.sh
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/ament_prefix_path.dsv
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/path.sh
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/environment/path.dsv
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.bash
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.sh
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.zsh
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/local_setup.dsv
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/package.dsv
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/ament_index/resource_index/packages/battery
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/cmake/batteryConfig.cmake
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/cmake/batteryConfig-version.cmake
+/home/mig/simulator/colcon_ws/src/battery/install/battery/share/battery/package.xml
