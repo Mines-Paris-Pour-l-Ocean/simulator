@@ -1,4 +1,0 @@
-source;share/battery/local_setup.bash
-source;share/battery/local_setup.dsv
-source;share/battery/local_setup.sh
-source;share/battery/local_setup.zsh
