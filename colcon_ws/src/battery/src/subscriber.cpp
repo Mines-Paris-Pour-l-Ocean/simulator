@@ -1,30 +1,35 @@
 #include <memory>
 
 #include "rclcpp/rclcpp.hpp"
+#include <stonefish_ros2/msg/thruster_state.hpp>
 #include "std_msgs/msg/string.hpp"
 
-class MinimalSubscriber : public rclcpp::Node
+class Thrust : public rclcpp::Node
 {
 public:
-  MinimalSubscriber()
-  : Node("test_battery")
+  Thrust()
+  : Node("battery")
 
   {
     auto topic_callback =
-      [this](std_msgs::msg::String::UniquePtr msg) -> void {
-        RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg->data.c_str());
+      [this](stonefish_ros2::msg::ThrusterState::SharedPtr msg) -> void {
+	for (int i = 0; i<8; i++){
+	  this->values[i] = msg->thrust[i]/9.81;
+	}
       };
-    subscription_ = this->create_subscription<std_msgs::msg::String>("bluerov/controller/thruster_state", 10, topic_callback);
+    subscription_ = this->create_subscription<stonefish_ros2::msg::ThrusterState>("/bluerov/controller/thruster_state", 10, topic_callback);
   }
 
+  std::vector<double> values = {0.,0.,0.,0.,0.,0.,0.,0.};
+
 private:
-  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
+  rclcpp::Subscription<stonefish_ros2::msg::ThrusterState>::SharedPtr subscription_;
 };
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<MinimalSubscriber>());
+  rclcpp::spin(std::make_shared<Thrust>());
   rclcpp::shutdown();
   return 0;
 }
