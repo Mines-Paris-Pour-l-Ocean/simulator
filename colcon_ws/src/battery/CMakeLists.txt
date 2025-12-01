@@ -27,6 +27,7 @@ find_library(MPFR_LIBRARY mpfr REQUIRED)
 
 # Packages ROS2
 find_package(ament_cmake REQUIRED)
+find_package(stonefish_ros2 REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
@@ -34,14 +35,14 @@ find_package(std_msgs REQUIRED)
 # CMake 3.16+ supporte target_precompile_headers
 if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.16)
   add_library(pch INTERFACE)
-  target_precompile_headers(pch INTERFACE src/battery_without_charge/pch.h)
+  target_precompile_headers(pch INTERFACE src/battery/pch.h)
 endif()
 
 # Bibliothèque pour les fichiers communs
 add_library(battery_lib
-  src/battery_without_charge/M_function.cpp
-  src/battery_without_charge/setup.cpp
-  src/battery_without_charge/battery.cpp
+  src/battery/M_function.cpp
+  src/battery/setup.cpp
+  src/battery/battery.cpp
 )
 
 target_include_directories(battery_lib PUBLIC
@@ -81,3 +82,4 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
+
