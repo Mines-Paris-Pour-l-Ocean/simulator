@@ -27,7 +27,6 @@ find_library(MPFR_LIBRARY mpfr REQUIRED)
 
 # Packages ROS2
 find_package(ament_cmake REQUIRED)
-find_package(stonefish_ros2 REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 

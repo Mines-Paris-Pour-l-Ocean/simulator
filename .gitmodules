@@ -35,9 +35,3 @@
 	path = colcon_ws/src/Anglerfish
 	url = https://github.com/Mines-Paris-Pour-l-Ocean/Anglerfish
 	branch = dev
-[submodule "colcon_ws/src/battery/src/battery_without_charge"]
-	path = colcon_ws/src/battery/src/battery_without_charge
-	url = https://codeberg.org/Titouan-Drouynot/battery_without_charge
-[submodule "colcon_ws/src/battery/src/--force"]
-	path = colcon_ws/src/battery/src/--force
-	url = https://github.com/Titouan-Drouynot/battery.git
