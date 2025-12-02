@@ -34,7 +34,7 @@ public:
     state_pub_ = this->create_publisher<sensor_msgs::msg::BatteryState>("/battery/battery_state", 10);
 		current_pub_ = this->create_publisher<battery::msg::CurrentInfos>("/battery/current_infos", 10);
     timer_ = this->create_wall_timer(
-    1000ms, std::bind(&BatteryState::timer_callback, this));
+    10ms, std::bind(&BatteryState::timer_callback, this));
     subscription_ = this->create_subscription<stonefish_ros2::msg::ThrusterState>("/bluerov/controller/thruster_state", 10, topic_callback);
 		for(int i = 0; i < (int)thrust_to_power_data.size(); i++){
 			voltage_data.push_back(thrust_to_power_data[i][0]);
@@ -74,7 +74,7 @@ private:
 			pwm[i] = interpolate(values[i], battery.U, thrust_to_pwm);
 		}
 
-		battery.update( -ptot, 1./3600.);
+		battery.update( -ptot, 1./360000.);
 
 		auto message = sensor_msgs::msg::BatteryState();
 		message.voltage = battery.U;
