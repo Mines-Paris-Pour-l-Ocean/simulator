@@ -28,7 +28,7 @@ public:
     auto topic_callback =
       [this](stonefish_ros2::msg::ThrusterState::SharedPtr msg) -> void {
 			for (int i = 0; i<8; i++){
-			this->values[i] = msg->thrust[i]/9.81;
+			this->values[i] = msg->thrust[i]/9.81*(-1);
 			}
 		};
     state_pub_ = this->create_publisher<sensor_msgs::msg::BatteryState>("/battery/battery_state", 10);
