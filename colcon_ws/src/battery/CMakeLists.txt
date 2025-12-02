@@ -97,6 +97,16 @@ ament_target_dependencies(battery_state
 
 
 # Installation
+install(
+	TARGETS battery_lib
+	EXPORT export_${PROJECT_NAME}
+	LIBRARY DESTINATION lib
+	ARCHIVE DESTINATION lib
+	RUNTIME DESTINATION bin
+)
+
+ament_export_targets(export_${PROJECT_NAME} HAS_LIBRARY_TARGET)
+
 install(TARGETS
   battery_state
   DESTINATION lib/${PROJECT_NAME})
