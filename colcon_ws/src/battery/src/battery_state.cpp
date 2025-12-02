@@ -40,10 +40,10 @@ public:
 			voltage_data.push_back(thrust_to_power_data[i][0]);
 			thrust_data.push_back(thrust_to_power_data[i][1]);
 			power_data.push_back(thrust_to_power_data[i][2]);
-			pwm_data.push_back(thrust_to_power_data[i][3]);
+			rpm_data.push_back(thrust_to_power_data[i][3]);
 		}
 		thrust_to_power = s_init(thrust_data, voltage_data, power_data);
-		thrust_to_pwm = s_init(thrust_data, voltage_data, pwm_data);
+		thrust_to_rpm = s_init(thrust_data, voltage_data, rpm_data);
 	}
 
 
@@ -54,9 +54,9 @@ private:
 	std::vector<double> voltage_data;
 	std::vector<double> thrust_data;
 	std::vector<double> power_data;
-	std::vector<double> pwm_data;
+	std::vector<double> rpm_data;
 	surface thrust_to_power;
-	surface thrust_to_pwm;
+	surface thrust_to_rpm;
 	rclcpp::TimerBase::SharedPtr timer_;
 	rclcpp::Publisher<sensor_msgs::msg::BatteryState>::SharedPtr state_pub_;
 	rclcpp::Publisher<battery::msg::CurrentInfos>::SharedPtr current_pub_;	
@@ -64,14 +64,14 @@ private:
   rclcpp::Subscription<stonefish_ros2::msg::ThrusterState>::SharedPtr subscription_;
   std::vector<double> values = {0.,0.,0.,0.,0.,0.,0.,0.};
 	std::vector<double> power = {0.,0.,0.,0.,0.,0.,0.,0.};
-	std::vector<double> pwm = {0.,0.,0.,0.,0.,0.,0.,0.};
+	std::vector<double> rpm = {0.,0.,0.,0.,0.,0.,0.,0.};
 	void timer_callback()
 	{
 		double ptot = 50;
 		for(int i = 0; i < 8; i++){
 			power[i] = interpolate(values[i], battery.U, thrust_to_power);
 			ptot += power[i];
-			pwm[i] = interpolate(values[i], battery.U, thrust_to_pwm);
+			rpm[i] = interpolate(values[i], battery.U, thrust_to_rpm);
 		}
 
 		battery.update( -ptot, 1./360000.);
@@ -115,7 +115,7 @@ private:
 		for(int i = 0; i < 8; i++){
 			current_msg.motor_current.push_back(-battery.I * power[i] / ptot);
 			//current_msg.motor_current.push_back(values[i]);
-			current_msg.motor_pwm.push_back(pwm[i]);
+			current_msg.motor_rpm.push_back(rpm[i]);
 		}
 		
 		current_pub_->publish(current_msg);
