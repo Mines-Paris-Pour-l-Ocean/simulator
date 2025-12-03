@@ -51,7 +51,7 @@ public:
 
 
 private:
-	Battery battery = Battery(VMIN * SERIES, VMAX * SERIES, CMAX, CMIN, (double)(R * SERIES / PARA), NC, 8.5 * SERIES * PARA, SERIES, PARA, DISCHARGING_FILENAME);
+	Battery battery = Battery(VMIN * SERIES, VMAX * SERIES, CMAX, CMIN, (double)(R * SERIES / PARA), NC, 8.75 * SERIES * PARA, SERIES, PARA, DISCHARGING_FILENAME);
 	std::vector<std::vector<double>> thrust_to_power_data = readCSV("/home/mig/simulator/colcon_ws/src/battery/src/battery/thrust_to_power.csv");
 	std::vector<double> voltage_data;
 	std::vector<double> thrust_data;
