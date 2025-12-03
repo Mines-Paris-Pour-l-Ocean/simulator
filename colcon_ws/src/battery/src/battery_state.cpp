@@ -7,6 +7,7 @@
 #include <stonefish_ros2/msg/thruster_state.hpp>
 #include "battery/msg/current_infos.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "std_msgs/msg/float32_multi_array.hpp"
 #include "sensor_msgs/msg/battery_state.hpp"
 
 
@@ -33,6 +34,7 @@ public:
 		};
     state_pub_ = this->create_publisher<sensor_msgs::msg::BatteryState>("/battery/battery_state", 10);
 		current_pub_ = this->create_publisher<battery::msg::CurrentInfos>("/battery/current_infos", 10);
+		ardu_pub_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("/battery/ardu_mon", 10);
     timer_ = this->create_wall_timer(
     10ms, std::bind(&BatteryState::timer_callback, this));
     subscription_ = this->create_subscription<stonefish_ros2::msg::ThrusterState>("/bluerov/controller/thruster_state", 10, topic_callback);
@@ -60,6 +62,7 @@ private:
 	rclcpp::TimerBase::SharedPtr timer_;
 	rclcpp::Publisher<sensor_msgs::msg::BatteryState>::SharedPtr state_pub_;
 	rclcpp::Publisher<battery::msg::CurrentInfos>::SharedPtr current_pub_;	
+	rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr ardu_pub_;
 	size_t count_;
   rclcpp::Subscription<stonefish_ros2::msg::ThrusterState>::SharedPtr subscription_;
   std::vector<double> values = {0.,0.,0.,0.,0.,0.,0.,0.};
@@ -119,6 +122,12 @@ private:
 		}
 		
 		current_pub_->publish(current_msg);
+
+
+		auto ardu_msg = std_msgs::msg::Float32MultiArray();
+		ardu_msg.data.push_back(-battery.I);
+		ardu_msg.data.push_back(battery.U);
+		ardu_pub_->publish(ardu_msg);
 	}
 
 };
