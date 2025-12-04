@@ -106,11 +106,11 @@ private:
 		}
 
 		// Concaténation finale
-		std::string output = "U : " + std::to_string(message.voltage) +
-											 ", I : " + std::to_string(message.current) +
-											 ", charge : " + std::to_string(message.charge); 
+		//std::string output = "U : " + std::to_string(message.voltage) +
+		//									 ", I : " + std::to_string(message.current) +
+		//									 ", charge : " + std::to_string(message.charge); 
 
-		RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", output.c_str());
+		//RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", output.c_str());
 		state_pub_->publish(message);
 
 		auto current_msg = battery::msg::CurrentInfos();

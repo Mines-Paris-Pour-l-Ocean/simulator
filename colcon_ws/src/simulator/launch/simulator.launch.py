@@ -38,6 +38,14 @@ def generate_launch_description():
         ]
     )
 
+    # get battery ROS2 package launch file
+    battery_path = PathJoinSubstitution([
+        FindPackageShare("battery"),
+        "launch",
+        "battery_launch.py"
+        ]
+    )
+
     # raytracer bash command
     path_raytracer = PathJoinSubstitution([FindPackagePrefix("anglerfish"), "lib", "anglerfish", "anglerfish"])
     raytracer_cmd = [path_raytracer,
@@ -60,6 +68,9 @@ def generate_launch_description():
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(v4l2_path),
+        ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(battery_path),
         ),
         ExecuteProcess(
             cmd = raytracer_cmd,
